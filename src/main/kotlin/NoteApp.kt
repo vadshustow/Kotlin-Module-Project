@@ -104,10 +104,10 @@ class NoteApp {
         do {
             println("Введите имя архива:")
             archiveName = scanner.nextLine()
-            if (archiveName.isEmpty()) {
+            if (archiveName.isBlank()) {
                 println("Имя архива не может быть пустым. Пожалуйста, введите имя заново.")
             }
-        } while (archiveName.isEmpty())
+        } while (archiveName.isBlank())
 
         archives.add(Archive(archiveName))
         println("Архив '$archiveName' создан.")
@@ -119,18 +119,18 @@ class NoteApp {
         do {
             println("Введите заголовок заметки:")
             noteTitle = scanner.nextLine()
-            if (noteTitle.isEmpty()) {
+            if (noteTitle.isBlank()) {
                 println("Заголовок не может быть пустым. Пожалуйста, введите заголовок заново.")
             }
-        } while (noteTitle.isEmpty())
+        } while (noteTitle.isBlank())
 
         do {
             println("Введите содержание заметки:")
             noteContent = scanner.nextLine()
-            if (noteContent.isEmpty()) {
+            if (noteContent.isBlank()) {
                 println("Содержание не может быть пустым. Пожалуйста, введите содержание заново.")
             }
-        } while (noteContent.isEmpty())
+        } while (noteContent.isBlank())
         archive.addNote(Note(noteTitle, noteContent))
         println("Заметка '$noteTitle' добавлена.")
     }
