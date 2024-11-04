@@ -1,3 +1,5 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+fun main() {
+    val noteApp = NoteApp()
+    println("Добро пожаловать в приложение \"Заметки\"")
+    noteApp.start()
 }
